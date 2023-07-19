@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<title>Admin Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("hh.jpg");
+  opacity: 0.7;
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+    /* Global Styles */
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2 {
+	margin-top: 0;
+}
+
+header {
+	background-color: #fff;
+	color: #333;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+nav li {
+	margin-left: 20px;
+}
+
+nav a {
+	color: #333;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+main {
+	padding: 20px;
+}
+
+/* Users Table Styles */
+
+#users {
+	margin-top: 50px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+
+th {
+	background-color: green;
+	color: #fff;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+button {
+	background-color: green;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	padding: 5px 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #555;
+}
+
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Admin Dashboard</h1>
+  <nav>
+    <ul>
+      <li><a href="AdminDashboard.html">Users</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="Home.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="users">
+    <h2>Registered Users</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID Number</th>
+        <th>FIRST NAME</th>
+        <th>LAST NAME</th>
+        <th>GUARDIAN NAMES</th>
+        <th>GUARDIAN PHONE NUMBER</th>
+        <th>SOCIAL CASE</th>
+        <th>PROVINCE</th>
+        <th>DISTRICT</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>12345</td>
+        <td>Kunda Melina</td>
+        <td>Ineza</td>
+        <td>John Peter</td>
+        <td>0786058039</td>
+        <td>this patient has a problem of mutuel de sante</td>
+        <td>KIGALI</td>
+        <td>KICUKIRO</td>
+        <td>
+          <button>Delete</button>
+          <button>Edit</button>
+        </td>
+      </tr>
+      <tr>
+        <td>67890</td>
+        <td>Mahoro Sylvie</td>
+        <td>Irumva</td>
+        <td>Carl Peter</td>
+        <td>078688888</td>
+        <td>this patient has a problem of not having clothers and food </td>
+        <td>KIGALI</td>
+        <td>GASABO</td>
+        <td>
+          <button>Delete</button>
+          <button>Edit</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="#" title="SYSY" target="_blank" class="w3-hover-text-green">Sysy</a></p>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
